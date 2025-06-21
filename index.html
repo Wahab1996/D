@@ -4,55 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Pediatric Emergency Differential Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; padding: 30px; background: #f4faff; color: #222; }
-    h1 { color: #005288; }
-    input { width: 60%; padding: 12px; margin-bottom: 20px; font-size: 16px; }
-    .result { background: #fff; padding: 15px; margin: 10px 0; border: 1px solid #ccc; }
-    .result b { color: #003366; }
+    body { font-family:'Poppins',sans-serif;background:#f0f8ff;padding:40px;color:#222;}
+    h1{color:#005288;display:flex;align-items:center;font-size:28px;}
+    h1 img{width:36px;height:36px;margin-right:12px;}
+    input{width:60%;padding:14px;font-size:16px;border:1px solid #ccc;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    .result{background:#fff;padding:16px;margin:12px 0;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
   </style>
 </head>
 <body>
-  <h1>Pediatric Emergency Differential Finder</h1>
-  <input type="text" id="symptomInput" placeholder="Type symptoms and press Enter (e.g. fever, cough)" onkeydown="handleKey(event)" />
+  <h1><img src="https://img.icons8.com/fluency/48/stethoscope.png"/> Pediatric Emergency Differential Finder</h1>
+  <p>Enter symptoms (comma separated) and press Enter.</p>
+  <input id="symptomInput" placeholder="e.g. fever, cough" onkeydown="checkEnter(event)"/>
   <div id="results"></div>
-
-  <script>
-    let data = [];
-    fetch('cases.json')
-      .then(res => res.json())
-      .then(json => data = json);
-
-    function handleKey(e) {
-      if (e.key === 'Enter') {
-        const val = document.getElementById('symptomInput').value.toLowerCase();
-        const results = document.getElementById('results');
-        results.innerHTML = '';
-        if (!val) return;
-
-        const inputSymptoms = val.split(',').map(s => s.trim());
-
-        data.forEach(entry => {
-          const match = inputSymptoms.every(sym =>
-            entry.symptoms.some(e => e.toLowerCase().includes(sym))
-          );
-          if (match) {
-            const div = document.createElement('div');
-            div.className = 'result';
-            div.innerHTML = `
-              <b>Symptoms:</b> ${entry.symptoms.join(', ')}<br>
-              <b>Differential Diagnosis:</b> ${entry.differential_diagnosis.join(', ')}<br>
-              <b>Final Diagnosis:</b> ${entry.final_diagnosis}<br>
-              <b>Treatment:</b> ${entry.suggested_treatment}<br>
-              <b>ICD-10:</b> ${entry.ICD10}<br>
-              <b>Age Group:</b> ${entry.age_group}<br>
-              <b>Red Flags:</b> ${entry.red_flags.join(', ')}
-            `;
-            results.appendChild(div);
-          }
-        });
-      }
-    }
-  </script>
-</body>
-</html>
+<script>
+let data=[];fetch('cases.json').then(r=>r.json()).then(j=>data=j);
+function checkEnter(e){if(e.key==='Enter'){search();}}
+function search(){
+ const val=document.getElementById('symptomInput').value.toLowerCase();
+ const results=document.getElementById('results');results.innerHTML='';
+ if(!val)return;
+ const symptoms=val.split(',').map(s=>s.trim());
+ data.forEach(d=>{
+   if(symptoms.every(s=>d.symptoms.some(x=>x.toLowerCase().includes(s)))){
+     const div=document.createElement('div');div.className='result';
+     div.innerHTML=`<b>${d.final_diagnosis}</b><br>
+     <b>Symptoms:</b> ${d.symptoms.join(', ')}<br>
+     <b>Differential DX:</b> ${d.differential_diagnosis.join(', ')}<br>
+     <b>Treatment:</b> ${d.suggested_treatment}<br>
+     <b>ICD-10:</b> ${d.ICD10}<br>
+     <b>Red Flags:</b> ${d.red_flags.join(', ')}`;results.appendChild(div);
+   }
+ });
+}
+</script>
+</body></html>
