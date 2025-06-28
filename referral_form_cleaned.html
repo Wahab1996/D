@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Referral Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .form-section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-section label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Patient Referral Form</h1>
+  <form>
+    <div class="form-section">
+      <label for="name">Patient Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter patient name" required>
+
+      <label for="age">Age / Gender</label>
+      <input type="text" id="age" name="age" placeholder="e.g. 30 years / Male" required>
+
+      <label for="vitals">Vital Signs</label>
+      <textarea id="vitals" name="vitals" placeholder="BP: ..., HR: ..., Temp: ..., RR: ..."></textarea>
+
+      <label for="status">Patient Status (Stable / Unstable)</label>
+      <input type="text" id="status" name="status" placeholder="e.g. Stable" required>
+
+      <label for="bref">Brief History</label>
+      <textarea id="bref" name="bref" placeholder="Write short summary of history here..."></textarea>
+
+      <label for="referral">Referred To</label>
+      <input type="text" id="referral" name="referral" placeholder="e.g. ENT OPD / Admission / ER" required>
+
+      <button type="submit">Generate PDF</button>
+    </div>
+  </form>
+  <div class="footer">
+    © 2025 Dr. Abdulwahab Abdulmannan AlSheikh – All rights reserved
+  </div>
+</body>
+</html>
