@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>نموذج إحالة مريض - Patient Referral Form</title>
+<title>Patient Referral Form - نموذج إحالة</title>
 <style>
 body {
   font-family: Arial, sans-serif;
-  direction: rtl;
+  direction: ltr;
   margin: 20px;
 }
 .form-container {
@@ -30,6 +30,7 @@ table {
 td {
   border: 1px solid #000;
   padding: 5px;
+  vertical-align: top;
 }
 label {
   display: inline-block;
@@ -40,7 +41,7 @@ input[type="text"] {
   border-bottom: 1px solid #000;
 }
 .checkbox {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .signature {
   margin-top: 20px;
@@ -61,31 +62,31 @@ button {
 <div class="form-container">
   <div class="header">
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Saudi_Ministry_of_Health_Logo.png" alt="logo">
-    <h2>تجمع المدينة الصحي - Madinah Health Cluster</h2>
-    <h3>نموذج إحالة - Referral Form</h3>
+    <h2>Madinah Health Cluster - تجمع المدينة الصحي</h2>
+    <h3>Referral Form - نموذج إحالة</h3>
   </div>
 
   <table>
     <tr>
-      <td>رقم الملف الطبي<br>MRN<br><input type="text"></td>
-      <td>الاسم<br>Name<br><input type="text"></td>
-      <td>الجنسية<br>Nationality<br><input type="text"></td>
+      <td>MRN<br><input type="text"></td>
+      <td>Patient Name<br><input type="text"></td>
+      <td>Nationality<br><input type="text"></td>
     </tr>
     <tr>
-      <td>العمر<br>Age<br><input type="text"></td>
-      <td>تاريخ الميلاد<br>Date of Birth<br><input type="text"></td>
-      <td>الجنس<br>Gender<br><input type="text"></td>
+      <td>Age<br><input type="text"></td>
+      <td>Date of Birth<br><input type="text"></td>
+      <td>Gender<br><input type="text"></td>
     </tr>
     <tr>
-      <td>المستشفى<br>Hospital<br><input type="text"></td>
-      <td>المنطقة/المحافظة<br>Region<br><input type="text"></td>
-      <td>القسم/الوحدة<br>Dept/Unit<br><input type="text"></td>
+      <td>Hospital<br><input type="text"></td>
+      <td>Region<br><input type="text"></td>
+      <td>Dept/Unit<br><input type="text"></td>
     </tr>
   </table>
 
   <table>
     <tr>
-      <td colspan="4">تفاصيل الإحالة - Referral Details:
+      <td colspan="4">Referral Details:
         <span class="checkbox"><input type="checkbox">Outpatient</span>
         <span class="checkbox"><input type="checkbox">Inpatient</span>
         <span class="checkbox"><input type="checkbox">Emergency</span>
@@ -93,39 +94,39 @@ button {
       </td>
     </tr>
     <tr>
-      <td>أحيل بواسطة<br>Referred By<br><input type="text"></td>
-      <td>رقم الجوال<br>Mobile No<br><input type="text"></td>
-      <td colspan="2">أحيل إلى<br>Referral to<br><input type="text"></td>
+      <td>Referred By<br><input type="text"></td>
+      <td>Mobile No<br><input type="text"></td>
+      <td colspan="2">Referral to<br><input type="text"></td>
     </tr>
     <tr>
-      <td>الوظيفة/الجهة<br>Designation/Organization<br><input type="text"></td>
-      <td>التاريخ<br>Date<br><input type="text"></td>
-      <td>الوقت<br>Time<br><input type="text"></td>
+      <td>Designation/Organization<br><input type="text"></td>
+      <td>Date<br><input type="text"></td>
+      <td>Time<br><input type="text"></td>
     </tr>
     <tr>
-      <td colspan="2">هل المريض على علم بالإحالة؟ Yes/No<br><input type="text"></td>
-      <td colspan="2">هل المريض وافق على الإحالة؟ Yes/No<br><input type="text"></td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-      <td>الفحص السريري<br>Physical Examination<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>التحاليل<br>Investigations<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>التشخيص<br>Diagnosis<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>العلاج<br>Treatment<br><input type="text"></td>
+      <td colspan="2">Is Patient Aware? Yes/No<br><input type="text"></td>
+      <td colspan="2">Patient Agreed? Yes/No<br><input type="text"></td>
     </tr>
   </table>
 
   <table>
     <tr>
-      <td>حالة المريض<br>Condition:
+      <td>Physical Examination<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Investigations<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Diagnosis<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Treatment<br><input type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>Patient Condition:
         <span class="checkbox"><input type="checkbox">Stable</span>
         <span class="checkbox"><input type="checkbox">Critical</span>
         <span class="checkbox"><input type="checkbox">Conscious</span>
@@ -133,24 +134,24 @@ button {
       </td>
     </tr>
     <tr>
-      <td>سبب الإحالة<br>Reason for Referral<br><input type="text"></td>
+      <td>Reason for Referral<br><input type="text"></td>
     </tr>
     <tr>
-      <td>وسيلة النقل<br>Transportation:
+      <td>Transportation:
         <span class="checkbox"><input type="checkbox">Ambulance</span>
         <span class="checkbox"><input type="checkbox">Helicopter</span>
         <span class="checkbox"><input type="checkbox">None</span>
       </td>
     </tr>
     <tr>
-      <td>مرافق<br>Escort:
+      <td>Escort:
         <span class="checkbox"><input type="checkbox">Relative</span>
         <span class="checkbox"><input type="checkbox">Doctor</span>
         <span class="checkbox"><input type="checkbox">Nurse</span>
       </td>
     </tr>
     <tr>
-      <td>المرفقات<br>Documents:
+      <td>Documents:
         <span class="checkbox"><input type="checkbox">Med Report</span>
         <span class="checkbox"><input type="checkbox">Lab Result</span>
         <span class="checkbox"><input type="checkbox">X-ray</span>
@@ -162,9 +163,9 @@ button {
   <div class="signature">
     <table>
       <tr>
-        <td>اسم الطبيب<br>Doctor's Name<br><input type="text"></td>
-        <td>التاريخ<br>Date<br><input type="text"></td>
-        <td>التوقيع<br>Signature<br><input type="text"></td>
+        <td>Doctor's Name<br><input type="text"></td>
+        <td>Date<br><input type="text"></td>
+        <td>Signature<br><input type="text"></td>
       </tr>
       <tr>
         <td colspan="3">Stamp<br><input type="text"></td>
@@ -172,7 +173,7 @@ button {
     </table>
   </div>
 
-  <button onclick="window.print()">طباعة</button>
+  <button onclick="window.print()">Print</button>
 </div>
 </body>
 </html>
