@@ -1,90 +1,178 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Patient Referral Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .form-section {
-      background-color: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .form-section label {
-      display: block;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    textarea {
-      resize: vertical;
-      height: 80px;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #888;
-    }
-    button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #004080;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0066cc;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>نموذج إحالة مريض - Patient Referral Form</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  margin: 20px;
+}
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  border: 2px solid #000;
+  padding: 15px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.header img {
+  height: 60px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+td {
+  border: 1px solid #000;
+  padding: 5px;
+}
+label {
+  display: inline-block;
+}
+input[type="text"] {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.checkbox {
+  margin-left: 10px;
+}
+.signature {
+  margin-top: 20px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+@media print {
+  button {
+    display: none;
+  }
+}
+</style>
 </head>
 <body>
-  <h1>Patient Referral Form</h1>
-  <form>
-    <div class="form-section">
-      <label for="name">Patient Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter patient name" required>
-
-      <label for="age">Age / Gender</label>
-      <input type="text" id="age" name="age" placeholder="e.g. 30 years / Male" required>
-
-      <label for="vitals">Vital Signs</label>
-      <textarea id="vitals" name="vitals" placeholder="BP: ..., HR: ..., Temp: ..., RR: ..."></textarea>
-
-      <label for="status">Patient Status (Stable / Unstable)</label>
-      <input type="text" id="status" name="status" placeholder="e.g. Stable" required>
-
-      <label for="bref">Brief History</label>
-      <textarea id="bref" name="bref" placeholder="Write short summary of history here..."></textarea>
-
-      <label for="referral">Referred To</label>
-      <input type="text" id="referral" name="referral" placeholder="e.g. ENT OPD / Admission / ER" required>
-
-      <button type="submit">Generate PDF</button>
-    </div>
-  </form>
-  <div class="footer">
-    © 2025 Dr. Abdulwahab Abdulmannan AlSheikh – All rights reserved
+<div class="form-container">
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Saudi_Ministry_of_Health_Logo.png" alt="logo">
+    <h2>تجمع المدينة الصحي - Madinah Health Cluster</h2>
+    <h3>نموذج إحالة - Referral Form</h3>
   </div>
+
+  <table>
+    <tr>
+      <td>رقم الملف الطبي<br>MRN<br><input type="text"></td>
+      <td>الاسم<br>Name<br><input type="text"></td>
+      <td>الجنسية<br>Nationality<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>العمر<br>Age<br><input type="text"></td>
+      <td>تاريخ الميلاد<br>Date of Birth<br><input type="text"></td>
+      <td>الجنس<br>Gender<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>المستشفى<br>Hospital<br><input type="text"></td>
+      <td>المنطقة/المحافظة<br>Region<br><input type="text"></td>
+      <td>القسم/الوحدة<br>Dept/Unit<br><input type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td colspan="4">تفاصيل الإحالة - Referral Details:
+        <span class="checkbox"><input type="checkbox">Outpatient</span>
+        <span class="checkbox"><input type="checkbox">Inpatient</span>
+        <span class="checkbox"><input type="checkbox">Emergency</span>
+        <span class="checkbox"><input type="checkbox">Life Threatening</span>
+      </td>
+    </tr>
+    <tr>
+      <td>أحيل بواسطة<br>Referred By<br><input type="text"></td>
+      <td>رقم الجوال<br>Mobile No<br><input type="text"></td>
+      <td colspan="2">أحيل إلى<br>Referral to<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>الوظيفة/الجهة<br>Designation/Organization<br><input type="text"></td>
+      <td>التاريخ<br>Date<br><input type="text"></td>
+      <td>الوقت<br>Time<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="2">هل المريض على علم بالإحالة؟ Yes/No<br><input type="text"></td>
+      <td colspan="2">هل المريض وافق على الإحالة؟ Yes/No<br><input type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>الفحص السريري<br>Physical Examination<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>التحاليل<br>Investigations<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>التشخيص<br>Diagnosis<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>العلاج<br>Treatment<br><input type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <td>حالة المريض<br>Condition:
+        <span class="checkbox"><input type="checkbox">Stable</span>
+        <span class="checkbox"><input type="checkbox">Critical</span>
+        <span class="checkbox"><input type="checkbox">Conscious</span>
+        <span class="checkbox"><input type="checkbox">Unconscious</span>
+      </td>
+    </tr>
+    <tr>
+      <td>سبب الإحالة<br>Reason for Referral<br><input type="text"></td>
+    </tr>
+    <tr>
+      <td>وسيلة النقل<br>Transportation:
+        <span class="checkbox"><input type="checkbox">Ambulance</span>
+        <span class="checkbox"><input type="checkbox">Helicopter</span>
+        <span class="checkbox"><input type="checkbox">None</span>
+      </td>
+    </tr>
+    <tr>
+      <td>مرافق<br>Escort:
+        <span class="checkbox"><input type="checkbox">Relative</span>
+        <span class="checkbox"><input type="checkbox">Doctor</span>
+        <span class="checkbox"><input type="checkbox">Nurse</span>
+      </td>
+    </tr>
+    <tr>
+      <td>المرفقات<br>Documents:
+        <span class="checkbox"><input type="checkbox">Med Report</span>
+        <span class="checkbox"><input type="checkbox">Lab Result</span>
+        <span class="checkbox"><input type="checkbox">X-ray</span>
+        <span class="checkbox"><input type="checkbox">Other</span>
+      </td>
+    </tr>
+  </table>
+
+  <div class="signature">
+    <table>
+      <tr>
+        <td>اسم الطبيب<br>Doctor's Name<br><input type="text"></td>
+        <td>التاريخ<br>Date<br><input type="text"></td>
+        <td>التوقيع<br>Signature<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td colspan="3">Stamp<br><input type="text"></td>
+      </tr>
+    </table>
+  </div>
+
+  <button onclick="window.print()">طباعة</button>
+</div>
 </body>
 </html>
