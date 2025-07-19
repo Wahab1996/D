@@ -1,179 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Patient Referral Form - نموذج إحالة</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  direction: ltr;
-  margin: 20px;
-}
-.form-container {
-  max-width: 800px;
-  margin: auto;
-  border: 2px solid #000;
-  padding: 15px;
-}
-.header {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.header img {
-  height: 60px;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 10px;
-}
-td {
-  border: 1px solid #000;
-  padding: 5px;
-  vertical-align: top;
-}
-label {
-  display: inline-block;
-}
-input[type="text"] {
-  width: 95%;
-  border: none;
-  border-bottom: 1px solid #000;
-}
-.checkbox {
-  margin-right: 10px;
-}
-.signature {
-  margin-top: 20px;
-}
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-}
-@media print {
-  button {
-    display: none;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Patient Referral Form - نموذج إحالة</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: ltr;
+      margin: 20px;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: auto;
+      border: 2px solid #000;
+      padding: 15px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .header img {
+      height: 60px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    td {
+      border: 1px solid #000;
+      padding: 5px;
+      vertical-align: top;
+    }
+    label {
+      display: inline-block;
+    }
+    input[type="text"] {
+      width: 95%;
+      border: none;
+      border-bottom: 1px solid #000;
+    }
+    .checkbox {
+      margin-right: 10px;
+    }
+    .signature {
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    @media print {
+      button {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="form-container">
-  <div class="header">
-    <img src="Saudi_Ministry_of_Health_Logo.png" alt="logo">
-    <h2>Madinah Health Cluster - تجمع المدينة الصحي</h2>
-    <h3>Referral Form - نموذج إحالة</h3>
-  </div>
+  <div class="form-container">
+    <div class="header">
+      <img src="Saudi_Ministry_of_Health_Logo.png" alt="logo">
+      <h2>Madinah Health Cluster - تجمع المدينة الصحي</h2>
+      <h3>Referral Form - نموذج إحالة</h3>
+    </div>
 
-  <table>
-    <tr>
-      <td>MRN<br><input type="text"></td>
-      <td>Patient Name<br><input type="text"></td>
-      <td>Nationality<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Age<br><input type="text"></td>
-      <td>Date of Birth<br><input type="text"></td>
-      <td>Gender<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Hospital<br><input type="text"></td>
-      <td>Region<br><input type="text"></td>
-      <td>Dept/Unit<br><input type="text"></td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-      <td colspan="4">Referral Details:
-        <span class="checkbox"><input type="checkbox">Outpatient</span>
-        <span class="checkbox"><input type="checkbox">Inpatient</span>
-        <span class="checkbox"><input type="checkbox">Emergency</span>
-        <span class="checkbox"><input type="checkbox">Life Threatening</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Referred By<br><input type="text"></td>
-      <td>Mobile No<br><input type="text"></td>
-      <td colspan="2">Referral to<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Designation/Organization<br><input type="text"></td>
-      <td>Date<br><input type="text"></td>
-      <td>Time<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td colspan="2">Is Patient Aware? Yes/No<br><input type="text"></td>
-      <td colspan="2">Patient Agreed? Yes/No<br><input type="text"></td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-      <td>Physical Examination<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Investigations<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Diagnosis<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Treatment<br><input type="text"></td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-      <td>Patient Condition:
-        <span class="checkbox"><input type="checkbox">Stable</span>
-        <span class="checkbox"><input type="checkbox">Critical</span>
-        <span class="checkbox"><input type="checkbox">Conscious</span>
-        <span class="checkbox"><input type="checkbox">Unconscious</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Reason for Referral<br><input type="text"></td>
-    </tr>
-    <tr>
-      <td>Transportation:
-        <span class="checkbox"><input type="checkbox">Ambulance</span>
-        <span class="checkbox"><input type="checkbox">Helicopter</span>
-        <span class="checkbox"><input type="checkbox">None</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Escort:
-        <span class="checkbox"><input type="checkbox">Relative</span>
-        <span class="checkbox"><input type="checkbox">Doctor</span>
-        <span class="checkbox"><input type="checkbox">Nurse</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Documents:
-        <span class="checkbox"><input type="checkbox">Med Report</span>
-        <span class="checkbox"><input type="checkbox">Lab Result</span>
-        <span class="checkbox"><input type="checkbox">X-ray</span>
-        <span class="checkbox"><input type="checkbox">Other</span>
-      </td>
-    </tr>
-  </table>
-
-  <div class="signature">
     <table>
       <tr>
-        <td>Doctor's Name<br><input type="text"></td>
-        <td>Date<br><input type="text"></td>
-        <td>Signature<br><input type="text"></td>
+        <td>MRN<br><input type="text"></td>
+        <td>Patient Name<br><input type="text"></td>
+        <td>Nationality<br><input type="text"></td>
       </tr>
       <tr>
-        <td colspan="3">Stamp<br><input type="text"></td>
+        <td>Age<br><input type="text"></td>
+        <td>Date of Birth<br><input type="text"></td>
+        <td>Gender<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Hospital<br><input type="text"></td>
+        <td>Region<br><input type="text"></td>
+        <td>Dept/Unit<br><input type="text"></td>
       </tr>
     </table>
-  </div>
 
-  <button onclick="window.print()">Print</button>
-</div>
+    <table>
+      <tr>
+        <td colspan="4">Referral Details:
+          <span class="checkbox"><input type="checkbox">Outpatient</span>
+          <span class="checkbox"><input type="checkbox">Inpatient</span>
+          <span class="checkbox"><input type="checkbox">Emergency</span>
+          <span class="checkbox"><input type="checkbox">Life Threatening</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Referred By<br><input type="text"></td>
+        <td>Mobile No<br><input type="text"></td>
+        <td colspan="2">Referral to<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Designation/Organization<br><input type="text"></td>
+        <td>Date<br><input type="text"></td>
+        <td>Time<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td colspan="2">Is Patient Aware? Yes/No<br><input type="text"></td>
+        <td colspan="2">Patient Agreed? Yes/No<br><input type="text"></td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>Physical Examination<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Investigations<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Diagnosis<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Treatment<br><input type="text"></td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>Patient Condition:
+          <span class="checkbox"><input type="checkbox">Stable</span>
+          <span class="checkbox"><input type="checkbox">Critical</span>
+          <span class="checkbox"><input type="checkbox">Conscious</span>
+          <span class="checkbox"><input type="checkbox">Unconscious</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Reason for Referral<br><input type="text"></td>
+      </tr>
+      <tr>
+        <td>Transportation:
+          <span class="checkbox"><input type="checkbox">Ambulance</span>
+          <span class="checkbox"><input type="checkbox">Helicopter</span>
+          <span class="checkbox"><input type="checkbox">None</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Escort:
+          <span class="checkbox"><input type="checkbox">Relative</span>
+          <span class="checkbox"><input type="checkbox">Doctor</span>
+          <span class="checkbox"><input type="checkbox">Nurse</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Documents:
+          <span class="checkbox"><input type="checkbox">Med Report</span>
+          <span class="checkbox"><input type="checkbox">Lab Result</span>
+          <span class="checkbox"><input type="checkbox">X-ray</span>
+          <span class="checkbox"><input type="checkbox">Other</span>
+        </td>
+      </tr>
+    </table>
+
+    <div class="signature">
+      <table>
+        <tr>
+          <td>Doctor's Name<br><input type="text"></td>
+          <td>Date<br><input type="text"></td>
+          <td>Signature<br><input type="text"></td>
+        </tr>
+        <tr>
+          <td colspan="3">Stamp<br><input type="text"></td>
+        </tr>
+      </table>
+    </div>
+
+    <button onclick="window.print()">Print</button>
+  </div>
 </body>
 </html>
